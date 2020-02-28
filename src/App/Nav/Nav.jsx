@@ -4,7 +4,7 @@ import './Nav.scss';
 const Nav = () => {
     return (
         <nav className='Nav'>
-            Nav Nav
+            Nav
         </nav>
     )
 };
