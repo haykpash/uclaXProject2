@@ -1,3 +1,16 @@
 .Header {
+   // position: fixed;
+    background-color: #000000;
     color: white;
+    height: 50px;
+    border: solid rgb(155, 151, 151);
+
+    .logo {
+        color: red;
+        position: absolute;
+        left: 155px;
+        top: 17px;
+        font-size: 30px;
+        font-style: oblique;
+    }
 }

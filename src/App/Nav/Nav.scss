@@ -1,3 +1,119 @@
 .Nav {
-    color: white
+    height: 140px;
+    border: solid rgb(155, 151, 151);
+    background-color: #000000;
+    .icon {
+        width: 20px;
+        position: absolute;
+        color: rgb(145, 145, 145); 
+        display: block;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        &:hover{
+            color: white;          
+        }
+    }
+    .menubar {
+        left: 11px;
+        top: 13px;
+        padding: 12px;
+    }
+    .menu {
+        position: absolute;
+        padding: 30px;
+        background-color:whitesmoke;
+        width: 200px;
+        height: 200px;
+        top: 60px;
+        .rooms {
+            color: rgb(23, 20, 69);
+            font-size: 18px;
+            padding: 20px;
+            cursor: default;
+            .living   {
+                padding: 20px;
+                &:hover {
+                    text-decoration: underline red;
+                }
+            }
+            .dining   {
+                padding: 20px;
+                &:hover {
+                    text-decoration: underline red;
+                }
+            }
+            .kitchen   {
+                padding: 20px;
+                &:hover {
+                    text-decoration: underline red;
+                }
+            }
+        }
+    }
+    .xmenu {
+        top:11px;
+        height: 25px;
+        position: absolute;
+        color: black;
+        width: 20px;
+        left: 11px;
+        padding: 12px;
+        background-color: whitesmoke;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .search {
+        right: 25px;
+        top: 27px;
+        //text-decoration: underline;
+    }
+    .input {
+        border: none;
+        position: absolute;
+        border-radius: 20px;
+        background-color: whitesmoke;
+        font-size: 20px;
+        width: 300px;
+        left: 50px;
+        top:70px
+        
+    }
+    .menu768 {
+        width: 310px;
+        left: 350px;
+        color: seashell;
+        position: absolute;
+        top: 12px;
+        
+        .a {
+            
+            padding: 15px;
+            display: inline-block;
+            cursor: default;
+            
+            &:hover {
+                background-color: rgb(34, 34, 34);
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .Nav {
+        .input {
+            left: 355px;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .Nav {
+        .input {
+           // position: absolute;
+            left: 65%;
+            top: 25px;
+        }
+    }
 }

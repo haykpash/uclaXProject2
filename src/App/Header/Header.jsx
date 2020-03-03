@@ -4,7 +4,9 @@ import './Header.scss';
 const Header = () => {
     return (
         <header className='Header'>
-            Header
+            <span className='logo'>
+                interior
+            </span>
         </header>
     )
 };
