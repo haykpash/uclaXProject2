@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
 
@@ -21,7 +22,6 @@ const Nav = () => {
             updateSearchImput(true);
             updateMenuBar(false);
             updateCloseMenu(false)
-            updateBars(true);
         } else {
             updateSearchImput(false);
             updateMenuBar(false);
@@ -34,7 +34,7 @@ const Nav = () => {
             updateMenuBar(true);
             updateSearchImput(false);
             updateCloseMenu(true)
-            updateBars(false);
+            updateBars(true);
         } 
     }
     const handleCloseMenuClick = () => {
@@ -50,9 +50,12 @@ const Nav = () => {
         if (window.innerWidth > 768) {
             updateBars(false);
             updateMenu768(true);
+            updateMenuBar(false);
+            updateCloseMenu(false);
         } else {
             updateBars(true);
             updateMenu768(false);
+            updateBars(true);
         }
     }
     useEffect (()=>{
@@ -72,11 +75,14 @@ const Nav = () => {
                         <div className='living'>
                             Living Room
                         </div>
+                        <div className='dining'>
+                            Dining room
+                        </div>
                         <div className='kitchen'>
                             Kitchen
                         </div>
-                        <div className='dining'>
-                            Dining room
+                        <div className='login'>
+                            Login
                         </div>
                     </div>
                 </div>
@@ -102,6 +108,10 @@ const Nav = () => {
             <div className='search icon' onClick ={handleSearchInputClick}>
                 <FontAwesomeIcon icon={faSearch} />
             </div>
+            <div className='user icon'>
+                <FontAwesomeIcon icon={faUserCircle} />
+            </div>
+            
             { shearchInput &&
                 <input className='input' 
                     type='search'

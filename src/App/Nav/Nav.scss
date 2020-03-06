@@ -1,9 +1,9 @@
 .Nav {
     height: 140px;
     border: solid rgb(155, 151, 151);
-    background-color: #000000;
+    background-color: #17202A  ;
     .icon {
-        width: 20px;
+        width: 25px;
         position: absolute;
         color: rgb(145, 145, 145); 
         display: block;
@@ -17,7 +17,7 @@
     }
     .menubar {
         left: 11px;
-        top: 13px;
+        top: 9px;
         padding: 12px;
     }
     .menu {
@@ -25,7 +25,7 @@
         padding: 30px;
         background-color:whitesmoke;
         width: 200px;
-        height: 200px;
+        height: 250px;
         top: 60px;
         .rooms {
             color: rgb(23, 20, 69);
@@ -50,10 +50,16 @@
                     text-decoration: underline red;
                 }
             }
+            .login   {
+                padding: 20px;
+                &:hover {
+                    text-decoration: underline red;
+                }
+            }
         }
     }
     .xmenu {
-        top:11px;
+        top: 11px;
         height: 25px;
         position: absolute;
         color: black;
@@ -67,9 +73,13 @@
         }
     }
     .search {
-        right: 25px;
-        top: 27px;
+        right: 70px;
+        top: 24px;
         //text-decoration: underline;
+    }
+    .user {
+        right: 25px;
+        top: 23px;
     }
     .input {
         border: none;
@@ -84,7 +94,7 @@
     }
     .menu768 {
         width: 310px;
-        left: 350px;
+        left: 280px;
         color: seashell;
         position: absolute;
         top: 12px;
@@ -96,7 +106,7 @@
             cursor: default;
             
             &:hover {
-                background-color: rgb(34, 34, 34);
+                background-color: #2C3E50  ;
             }
         }
     }
@@ -104,7 +114,7 @@
 @media screen and (min-width: 768px){
     .Nav {
         .input {
-            left: 355px;
+            left: 280px;
         }
     }
 }
@@ -112,7 +122,7 @@
     .Nav {
         .input {
            // position: absolute;
-            left: 65%;
+            left: 60%;
             top: 25px;
         }
     }

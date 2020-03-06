@@ -9,16 +9,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "concurrently": "^5.1.0",
+    "http-proxy-middleware": "^1.0.1",
     "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
+  "homepage": "https://meatch-uclax-inclass.herokuapp.com",
+  "heroku-run-build-script": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_ENV=production node express.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "client": "react-scripts start",
+    "server": "nodemon express.js",
+    "dev": "NODE_ENV=dev concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" "
   },
   "eslintConfig": {
     "extends": "react-app"
