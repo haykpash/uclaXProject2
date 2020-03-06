@@ -14,3 +14,10 @@
         font-style: oblique;
     }
 }
+@media screen and (max-width: 768px) {
+    .Header{
+        .logo {
+            left: 20%;
+        }
+    }
+} 

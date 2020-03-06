@@ -1,0 +1,22 @@
+.Contact{
+    padding: 0px; 
+}
+// Median Breikpoint
+@media screen and (min-width: 768px) {
+    .contact {
+        .row1 {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            .column { min-height: 300px;
+            }
+            .column1 {
+                flex: 1;
+                margin-right: 20px;
+            }
+            .column2 {
+                flex: 2;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import Header from './Header/Header.jsx';
 import Nav from './Nav/Nav.jsx';
@@ -8,12 +9,14 @@ import Footer from './Footer/Footer.jsx';
 
 const App = () => {
     return (
-        <div className='App'>
-            <Header />
-            <Nav />
-            <Main />
-            <Footer />
-        </div>
+        <Router>
+            <div className='App'>
+                <Header />
+                <Nav />
+                <Main />
+                <Footer />
+            </div>
+        </Router>
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.scss';
+import { NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -70,34 +71,37 @@ const Nav = () => {
             </div>
             }
             { menuBar &&
-                <div className='menu'>
-                    <div className='rooms'>
-                        <div className='living'>
-                            Living Room
+                <div className='menu1'>
+                    <div className='inmenu'>
+                        <div className='rooms'>
+                            Rooms
                         </div>
-                        <div className='dining'>
-                            Dining room
+                        <div className='contact'>
+                            <NavLink to='/contacts'>Contacts</NavLink>
                         </div>
-                        <div className='kitchen'>
-                            Kitchen
+                        <div className='about'>
+                            About us
                         </div>
                         <div className='login'>
-                            Login
+                            <NavLink to='/login'>Login</NavLink>
                         </div>
                     </div>
                 </div>
             }
             { menu768 &&
                 <div className='menu768'>
-                        <div className='living a'>
-                            Living Room
-                        </div>
-                        <div className='kitchen a'>
-                            Kitchen
-                        </div>
-                        <div className='dining a'>
-                            Dining room
-                        </div>
+                    <div className='a'>
+                        Rooms
+                    </div>
+                    <div className='a'>
+                        <NavLink to='/contacts'>Contacts</NavLink>
+                    </div>
+                    <div className='a'>
+                        About us
+                    </div>
+                    <div className='a'>
+                        <NavLink to='/login'>Login</NavLink>
+                    </div>
                 </div>
             }
             { closeMenu &&

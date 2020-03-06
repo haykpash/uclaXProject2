@@ -20,40 +20,42 @@
         top: 9px;
         padding: 12px;
     }
-    .menu {
+    .menu1 {
         position: absolute;
         padding: 30px;
         background-color:whitesmoke;
         width: 200px;
         height: 250px;
         top: 60px;
-        .rooms {
-            color: rgb(23, 20, 69);
+        .inmenu {
+            color: #99A3A4  ;
             font-size: 18px;
             padding: 20px;
             cursor: default;
-            .living   {
+            .rooms {
                 padding: 20px;
                 &:hover {
                     text-decoration: underline red;
                 }
             }
-            .dining   {
+            .contact   {
                 padding: 20px;
                 &:hover {
                     text-decoration: underline red;
                 }
             }
-            .kitchen   {
+            .about   {
                 padding: 20px;
                 &:hover {
                     text-decoration: underline red;
                 }
             }
-            .login   {
-                padding: 20px;
-                &:hover {
-                    text-decoration: underline red;
+            .login {
+                a {
+                    padding: 20px;
+                    &:hover {
+                        text-decoration: underline red;
+                    }
                 }
             }
         }
@@ -93,12 +95,11 @@
         
     }
     .menu768 {
-        width: 310px;
+        width: 318px;
         left: 280px;
         color: seashell;
         position: absolute;
         top: 12px;
-        
         .a {
             
             padding: 15px;
