@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Login from '../Menu/Login/Login.jsx';
 import Contacts from '../Menu/Contacts/Contacts.jsx';
+import About from '../Menu/About/About.jsx';
 
 const Main = () => {
     return (
@@ -14,6 +15,9 @@ const Main = () => {
                 </Route> 
                 <Route path='/contacts'>
                     <Contacts />
+                </Route>
+                <Route path='/'>
+                    <About />
                 </Route>
             </Switch>
         </main>

@@ -59,6 +59,12 @@ const Nav = () => {
             updateBars(true);
         }
     }
+    // const [bbbb] = useState ();
+    // const handleBbbbClick = () => {
+    //     if (bbbb === true ) {
+    //         updateCloseMenu(true);
+    //     }
+    // }
     useEffect (()=>{
         window.addEventListener('resize', handleWindoSize);
         handleWindoSize();
@@ -76,13 +82,13 @@ const Nav = () => {
                         <div className='rooms'>
                             Rooms
                         </div>
-                        <div className='contact'>
-                            <NavLink to='/contacts'>Contacts</NavLink>
+                        <div className='contact b' >
+                            <NavLink to='/contacts' >Contacts</NavLink>
                         </div>
-                        <div className='about'>
-                            About us
+                        <div className='about b'>
+                            <NavLink to='/'>About</NavLink>
                         </div>
-                        <div className='login'>
+                        <div className='login b'>
                             <NavLink to='/login'>Login</NavLink>
                         </div>
                     </div>
@@ -97,7 +103,7 @@ const Nav = () => {
                         <NavLink to='/contacts'>Contacts</NavLink>
                     </div>
                     <div className='a'>
-                        About us
+                        <NavLink to='/'>About</NavLink>
                     </div>
                     <div className='a'>
                         <NavLink to='/login'>Login</NavLink>
@@ -105,7 +111,7 @@ const Nav = () => {
                 </div>
             }
             { closeMenu &&
-                <div className='xmenu' onClick={handleCloseMenuClick}>
+                <div className='xmenu' onClick = {handleCloseMenuClick} >
                     <FontAwesomeIcon icon={faTimes} />
                 </div>
             }

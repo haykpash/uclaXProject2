@@ -21,13 +21,20 @@
         padding: 12px;
     }
     .menu1 {
+        z-index: 1;
+        height: 100%;
         position: absolute;
         padding: 30px;
         background-color:whitesmoke;
         width: 200px;
-        height: 250px;
-        top: 60px;
+        top: 61px;
         .inmenu {
+            
+                // .b {
+                // background-color:rgb(254, 81, 81);
+                // padding: 2px;
+                // }
+            
             color: #99A3A4  ;
             font-size: 18px;
             padding: 20px;
@@ -61,7 +68,7 @@
         }
     }
     .xmenu {
-        top: 11px;
+        top: 12px;
         height: 25px;
         position: absolute;
         color: black;

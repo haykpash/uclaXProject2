@@ -33,7 +33,7 @@ const Login = () => {
         }
         if (messageRef.current.value.length < 1) {
             errorMessages.push({
-                message: 'You forgot to full out the Message field.',
+                message: 'You forgot to full out the Pasword field.',
             })
         }
             updateErrorsArrey(errorMessages);

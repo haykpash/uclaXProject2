@@ -30,7 +30,7 @@ app.use((request, response, next) => {
 const routes = require('./express-routes/index.js');
 //app.use('/api/colors', routes.colors);
 //app.use('/api/options', routes.options);
-//app.use('/api/slides', routes.slides);
+app.use('/api/slides', routes.slides);
 app.use('/api/email', routes.email);
 app.use('/api/login', routes.login);
 
