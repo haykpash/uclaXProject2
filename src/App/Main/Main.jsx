@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from '../Menu/Login/Login.jsx';
 import Contacts from '../Menu/Contacts/Contacts.jsx';
 import About from '../Menu/About/About.jsx';
+import Rooms from '../Menu/Rooms/Rooms.jsx';
 
 const Main = () => {
     return (
@@ -15,6 +16,9 @@ const Main = () => {
                 </Route> 
                 <Route path='/contacts'>
                     <Contacts />
+                </Route>
+                <Route path='/rooms'>
+                    <Rooms />
                 </Route>
                 <Route path='/'>
                     <About />

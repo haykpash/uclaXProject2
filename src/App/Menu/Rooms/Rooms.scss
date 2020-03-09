@@ -1,0 +1,45 @@
+.Rooms {
+    
+    background-color:  #D5D8DC  ;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        color:#0B5345;
+    }
+    .Room {
+        
+        text-align: center;
+        width: 300px ;
+        margin: 5px ; 
+        img {
+            display: block;
+        }
+        
+        
+        h3 {
+            color:#0B5345;
+            font: 1em sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            background-color: rgb(202, 192, 176);
+            padding: 5px  10px;
+        }
+    }
+    button { 
+        border: 100%;
+        background-color: #566573  ;
+        line-height: 30px;
+        color: #D5D8DC  ;
+        font-size: 15px;
+        
+        &.active {
+            background-color:#273746;
+        }
+    }
+    
+}

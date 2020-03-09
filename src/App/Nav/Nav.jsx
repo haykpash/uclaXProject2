@@ -79,14 +79,14 @@ const Nav = () => {
             { menuBar &&
                 <div className='menu1'>
                     <div className='inmenu'>
+                    <div className='about b'>
+                            <NavLink to='/'exact>About</NavLink>
+                        </div>
                         <div className='rooms'>
-                            Rooms
+                            <NavLink to='/rooms'>Rooms</NavLink>
                         </div>
                         <div className='contact b' >
                             <NavLink to='/contacts' >Contacts</NavLink>
-                        </div>
-                        <div className='about b'>
-                            <NavLink to='/'>About</NavLink>
                         </div>
                         <div className='login b'>
                             <NavLink to='/login'>Login</NavLink>
@@ -97,13 +97,13 @@ const Nav = () => {
             { menu768 &&
                 <div className='menu768'>
                     <div className='a'>
-                        Rooms
+                        <NavLink to='/'exact>About</NavLink>
+                    </div>
+                    <div className='a'>
+                        <NavLink to='/rooms'>Rooms</NavLink>
                     </div>
                     <div className='a'>
                         <NavLink to='/contacts'>Contacts</NavLink>
-                    </div>
-                    <div className='a'>
-                        <NavLink to='/'>About</NavLink>
                     </div>
                     <div className='a'>
                         <NavLink to='/login'>Login</NavLink>
