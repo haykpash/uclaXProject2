@@ -28,43 +28,34 @@
         background-color:whitesmoke;
         width: 200px;
         top: 61px;
+
+
         .inmenu {
             
+            margin: 50px;
+            .inactive {
+                margin-bottom: 50px;
+                display: block;
+                color: grey;
+                text-decoration: none;
+            }
                 // .b {
                 // background-color:rgb(254, 81, 81);
                 // padding: 2px;
                 // }
             
-            color: #99A3A4  ;
-            font-size: 18px;
-            padding: 20px;
-            cursor: default;
-            .rooms {
-                padding: 20px;
-                &:hover {
-                    text-decoration: underline red;
-                }
-            }
-            .contact   {
-                padding: 20px;
-                &:hover {
-                    text-decoration: underline red;
-                }
-            }
-            .about   {
-                padding: 20px;
-                &:hover {
-                    text-decoration: underline red;
-                }
-            }
-            .login {
+            
+            //  padding: 20px;
+            // cursor: default;
+            
                 a {
-                    padding: 20px;
+                    color: #99A3A4  ;
+                    font-size: 20px;
                     &:hover {
                         text-decoration: underline red;
                     }
                 }
-            }
+            
         }
     }
     .xmenu {
@@ -84,7 +75,7 @@
     .search {
         right: 70px;
         top: 24px;
-        //text-decoration: underline;
+        z-index: 1;
     }
     .user {
         right: 25px;
@@ -92,13 +83,14 @@
     }
     .input {
         border: none;
-        position: absolute;
+        position: fixed;
+        //justify-content: center;
         border-radius: 20px;
         background-color: whitesmoke;
         font-size: 20px;
-        width: 300px;
-        left: 50px;
-        top:70px
+        width: 280px;
+        right: 5%;
+        top:70px;
         
     }
     .menu768 {
@@ -107,6 +99,10 @@
         color: seashell;
         position: absolute;
         top: 12px;
+        .inactive {
+            color: rgb(145, 145, 145);
+        }
+        
         .a {
             
             padding: 15px;
@@ -123,6 +119,7 @@
     .Nav {
         .input {
             left: 280px;
+            
         }
     }
 }

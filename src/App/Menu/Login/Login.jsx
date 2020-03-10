@@ -33,11 +33,10 @@ const Login = () => {
         }
         if (messageRef.current.value.length < 1) {
             errorMessages.push({
-                message: 'You forgot to full out the Pasword field.',
+                message: 'You forgot to full out the Pasword field.' ,
             })
         }
             updateErrorsArrey(errorMessages);
-
             // Keep track of errors - and update the DOM with feedback if there is an error.
         if(errorMessages.length >0) {
             updateFormIsValid(false);
@@ -50,11 +49,9 @@ const Login = () => {
                 email: emailRef.current.value,
                 message: messageRef.current.value,
             }
-
             API.post('login/send',postData).then((result) => {
             console.log('Posting the data', result);
             });
-
         }     
     }
     const validateEmail = () => {

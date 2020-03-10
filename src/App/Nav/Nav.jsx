@@ -29,17 +29,17 @@ const Nav = () => {
         }
     }
     const handleMenuBarClick = () => {
-        console.log('MenuBar click');
+        console.log('handleMenuBarClick click');
         
         if (menuBar === false) {
             updateMenuBar(true);
             updateSearchImput(false);
-            updateCloseMenu(true)
+            updateCloseMenu(true);
             updateBars(true);
         } 
     }
     const handleCloseMenuClick = () => {
-        console.log('MenuBar click');
+        console.log('handleCloseMenuClick click');
         
         if (closeMenu === true) {
             updateMenuBar(false);
@@ -69,68 +69,77 @@ const Nav = () => {
         window.addEventListener('resize', handleWindoSize);
         handleWindoSize();
     },[]);
+
+
+    const handleNavLinkClick = () => {
+        console.log('handleNavLinkClick clicked');
+        updateMenuBar(false);
+        updateBars(true);
+        updateCloseMenu(false);
+    }
+
     return (
-        <nav className='Nav'>
-            {  bars &&
+    <nav className='Nav'>
+        {  bars &&
             <div className='menubar icon' onClick ={handleMenuBarClick}>
                 <FontAwesomeIcon icon={faBars} />
             </div>
-            }
-            { menuBar &&
-                <div className='menu1'>
-                    <div className='inmenu'>
-                    <div className='about b'>
-                            <NavLink to='/'exact>About</NavLink>
-                        </div>
-                        <div className='rooms'>
-                            <NavLink to='/rooms'>Rooms</NavLink>
-                        </div>
-                        <div className='contact b' >
-                            <NavLink to='/contacts' >Contacts</NavLink>
-                        </div>
-                        <div className='login b'>
-                            <NavLink to='/login'>Login</NavLink>
-                        </div>
+        }
+        { menuBar &&
+            <div className='menu1'  onClick={handleNavLinkClick}>
+                <div className='inmenu'>
+                <div className='about b'>
+                        <NavLink  to='/'exact className="inactive">About</NavLink>
+                    </div>
+                    <div className='rooms'>
+                        <NavLink to='/rooms' className="inactive">Rooms</NavLink>
+                    </div>
+                    <div className='contact b' >
+                        <NavLink to='/contacts' className="inactive">Contacts</NavLink>
+                    </div>
+                    <div className='login b'>
+                        <NavLink to='/login'className="inactive">Login</NavLink>
                     </div>
                 </div>
-            }
-            { menu768 &&
-                <div className='menu768'>
-                    <div className='a'>
-                        <NavLink to='/'exact>About</NavLink>
-                    </div>
-                    <div className='a'>
-                        <NavLink to='/rooms'>Rooms</NavLink>
-                    </div>
-                    <div className='a'>
-                        <NavLink to='/contacts'>Contacts</NavLink>
-                    </div>
-                    <div className='a'>
-                        <NavLink to='/login'>Login</NavLink>
-                    </div>
-                </div>
-            }
-            { closeMenu &&
-                <div className='xmenu' onClick = {handleCloseMenuClick} >
-                    <FontAwesomeIcon icon={faTimes} />
-                </div>
-            }
-            <div className='search icon' onClick ={handleSearchInputClick}>
-                <FontAwesomeIcon icon={faSearch} />
             </div>
-            <div className='user icon'>
-                <FontAwesomeIcon icon={faUserCircle} />
+        }
+        { menu768 &&
+            <div className='menu768'>
+                <div className='a'>
+                    <NavLink to='/'exact className="inactive">About</NavLink>
+                </div>
+                <div className='a'>
+                    <NavLink to='/rooms' className="inactive">Rooms</NavLink>
+                </div>
+            <div className='a'>
+                    <NavLink to='/contacts' className="inactive">Contacts</NavLink>
+                </div>
+                <div className='a'>
+                    <NavLink to='/login' className="inactive">Login</NavLink>
+                </div>
             </div>
-            
-            { shearchInput &&
-                <input className='input' 
-                    type='search'
-                    name="search" 
-                    id="search" 
-                    placeholder="   Search" 
-                />
-            }
-        </nav>
+        }
+        { closeMenu &&
+            <div className='xmenu' onClick = {handleCloseMenuClick} >
+                <FontAwesomeIcon icon={faTimes} />
+            </div>
+        }
+        <div className='search icon' onClick ={handleSearchInputClick}>
+            <FontAwesomeIcon icon={faSearch} />
+        </div>
+        <div className='user icon'>
+            <FontAwesomeIcon icon={faUserCircle} />
+        </div>
+    
+        { shearchInput &&
+            <input className='input' 
+                type='search'
+                name="search" 
+                id="search" 
+                placeholder="   Search" 
+            />
+        }
+    </nav>
     )
 };
 

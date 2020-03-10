@@ -1,5 +1,6 @@
 .Rooms {
     
+    text-align: center;
     background-color:  #D5D8DC  ;
     .container {
         display: flex;
@@ -7,6 +8,7 @@
         justify-content: center;
     }
     h2 {
+        margin: 0px;
         font-size: 30px;
         text-align: center;
         color:#0B5345;
@@ -31,7 +33,9 @@
         }
     }
     button { 
-        border: 100%;
+        
+        
+        //border: 100%;
         background-color: #566573  ;
         line-height: 30px;
         color: #D5D8DC  ;
