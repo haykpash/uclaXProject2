@@ -20,7 +20,7 @@ const Main = () => {
                 <Route path='/rooms'>
                     <Rooms />
                 </Route>
-                <Route path='/'>
+                <Route path='/' >
                     <About />
                 </Route>
             </Switch>

@@ -124,7 +124,7 @@ const Nav = () => {
                 <FontAwesomeIcon icon={faTimes} />
             </div>
         }
-        <div className='search icon' onClick ={handleSearchInputClick}>
+        <div className='search icon' onClick = {handleSearchInputClick}>
             <FontAwesomeIcon icon={faSearch} />
         </div>
         <div className='user icon'>
@@ -142,5 +142,4 @@ const Nav = () => {
     </nav>
     )
 };
-
 export default Nav;

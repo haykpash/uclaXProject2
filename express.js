@@ -29,6 +29,7 @@ app.use((request, response, next) => {
 ---------------------------*/
 const routes = require('./express-routes/index.js');
 //app.use('/api/colors', routes.colors);
+app.use('/api/tabbed', routes.tabbed);
 app.use('/api/rooms', routes.rooms);
 app.use('/api/slides', routes.slides);
 app.use('/api/email', routes.email);

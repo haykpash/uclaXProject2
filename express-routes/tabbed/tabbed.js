@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const colors = require('./colorsData.js');
+const tabbed = require('./tabbedData');
+
 router.get('/', (req,res) => { 
-    res.json(colors);
-    console.log('Retreived Colors'); 
+    res.json(tabbed);
+    console.log('Retreived Tabbed');
 });
 
 module.exports = router;
