@@ -40,9 +40,9 @@ const Tabbed = () => {
     return (
         <div className={ 'Tabbed' }>
             <div className="tabs">
-                <div onClick={ () => { setCurrentTab(tabItems[0]) } } className={ isOf1 } >Office1</div>
-                <div onClick={ () => { setCurrentTab(tabItems[1]) } } className={ isOf2 } >Office2</div>
-                <div onClick={ () => { setCurrentTab(tabItems[2]) } } className={ isOf3 } >Office3</div>
+                <div onClick={ () => { setCurrentTab(tabbe[0]) } } className={ isOf1 } >Office1</div>
+                <div onClick={ () => { setCurrentTab(tabbe[1]) } } className={ isOf2 } >Office2</div>
+                <div onClick={ () => { setCurrentTab(tabbe[2]) } } className={ isOf3 } >Office3</div>
             </div> 
             <div className="content"> 
                 <img  className="jpgs" src={ currentTab.image } alt={currentTab.title}/>
