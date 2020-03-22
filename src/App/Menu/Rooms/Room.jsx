@@ -15,10 +15,15 @@ const Room = (props) => {
     
     return (
         <div className='Room'>       
-            <img 
+            <img className='img'
                 onClick={ turnLightOn }
                 src={ props.singleRoom.img } 
                 alt={ props.singleRoom.name } />
+                
+                
+
+                
+                
         <h3>{ props.singleRoom.name }: Category: {props.singleRoom.category}</h3>
         <Lightbox  
             show={ showLightbox }  

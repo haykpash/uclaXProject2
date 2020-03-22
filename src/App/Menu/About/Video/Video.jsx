@@ -5,8 +5,10 @@ import './Video.scss';
 const Video = () => {
     return (
         <div className='tape'>
-            <ReactPlayer width='100%'
+            <ReactPlayer
+            
             url="https://youtu.be/_2LLXnUdUIc"
+            //url='https://www.youtube.com/watch?v=_2LLXnUdUIc'
             />
             </div>
         

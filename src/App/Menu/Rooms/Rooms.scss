@@ -3,27 +3,39 @@
     text-align: center;
     background-color:  #D5D8DC  ;
     .container {
+        
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
     h2 {
+        
         margin: 0px;
         font-size: 30px;
         text-align: center;
         color:#0B5345;
+        
     }
     .Room {
         
         text-align: center;
-        width: 300px ;
+        //width: 300px ;
         margin: 5px ; 
-        img {
+        overflow: hidden;
+        
+        .img {
+            transition: transform 1.1s;
+            max-width: 100% ;
             display: block;
+                
+            &:hover {
+                transition: transform 1.1s;
+                transform: scale(1.1);
+            }
         }
         
-        
         h3 {
+            
             color:#0B5345;
             font: 1em sans-serif;
             font-size: 20px;

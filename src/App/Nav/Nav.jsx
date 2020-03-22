@@ -8,6 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
+
 const Nav = () => {
 
     const [shearchInput, updateSearchImput] = useState(false);
@@ -59,25 +60,23 @@ const Nav = () => {
             updateBars(true);
         }
     }
-    // const [bbbb] = useState ();
-    // const handleBbbbClick = () => {
-    //     if (bbbb === true ) {
-    //         updateCloseMenu(true);
-    //     }
-    // }
+    
     useEffect (()=>{
         window.addEventListener('resize', handleWindoSize);
         handleWindoSize();
     },[]);
-
-
+    
     const handleNavLinkClick = () => {
         console.log('handleNavLinkClick clicked');
         updateMenuBar(false);
         updateBars(true);
         updateCloseMenu(false);
     }
-
+    const handelNotready = () => {
+        console.log('In progress button');
+        alert("This button is not ready yet");
+    }
+    
     return (
     <nav className='Nav'>
         {  bars &&
@@ -127,7 +126,7 @@ const Nav = () => {
         <div className='search icon' onClick = {handleSearchInputClick}>
             <FontAwesomeIcon icon={faSearch} />
         </div>
-        <div className='user icon'>
+        <div className='user icon' onClick = { handelNotready }>
             <FontAwesomeIcon icon={faUserCircle} />
         </div>
     

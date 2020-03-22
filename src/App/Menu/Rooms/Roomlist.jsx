@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Rooms/Rooms.scss';
 
 import Room from './Room.jsx';
 

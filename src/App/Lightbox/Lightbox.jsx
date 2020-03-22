@@ -13,6 +13,7 @@ const Lightbox = (props) => {
                 src={props.imageURL}
                 alt={props.imageAlt}
                 />
+                <h3>Boom</h3>
             </div>
         </div>
     );
