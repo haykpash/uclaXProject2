@@ -136,9 +136,13 @@ const Nav = () => {
                 name="search" 
                 id="search" 
                 placeholder="   Search" 
+                
             />
+            
         }
+        
     </nav>
+    
     )
 };
 export default Nav;
