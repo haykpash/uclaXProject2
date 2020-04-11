@@ -10,16 +10,13 @@ const EmailForm = () => {
     const [emailIsValid, updateEmailIsValid] = useState(true);
     const [formIsValid, updateFormIsValid] = useState(false);
     const [errors, updateErrorsArrey] = useState([]);
-
-        // refs :: Giving React's Virtual DOM accsess to the Phisycal DOM elements on the page
-        const emailRef = useRef();
-        const messageRef = useRef();
-
-        const handleFormSubmit = () => {
+    // refs :: Giving React's Virtual DOM accsess to the Phisycal DOM elements on the page
+    const emailRef = useRef();
+    const messageRef = useRef();
+    //
+    const handleFormSubmit = () => {
         console.log('You click me');
-
         let errorMessages = [];
-
         // validate the user filles in the form
         if (emailRef.current.value.length < 4) {
             errorMessages.push({
@@ -37,24 +34,20 @@ const EmailForm = () => {
             })
         }
             updateErrorsArrey(errorMessages);
-
             // Keep track of errors - and update the DOM with feedback if there is an error.
         if(errorMessages.length >0) {
             updateFormIsValid(false);
         } else {
             updateFormIsValid(true);
-        // if all is successful - we want to post the data
+            // if all is successful - we want to post the data
             console.log('Posting the data');
-            
             const postData = {
                 email: emailRef.current.value,
                 message: messageRef.current.value,
             }
-
             API.post('email/send',postData).then((result) => {
             console.log('Posting the data', result);
             });
-
         }     
     }
     const validateEmail = () => {
@@ -79,14 +72,13 @@ const EmailForm = () => {
         switch (keycode(event)){
             case 'spase':
             case 'enter':
-                handleFormSubmit();
-                break;
+            handleFormSubmit();
+            break;
             default:
             return true;
         }
     } 
     // const theCladdname = (formisvalid) ? 'xontactForm form-valid': 'ContaactForm form-invalid';
-
     const theClassname = classnames ({
         'EmailForm': true,
         'form-valid': formIsValid,
@@ -96,45 +88,47 @@ const EmailForm = () => {
         <div className={ theClassname } >
             {
                 (errors.length > 0) &&
-            <div className="error-message">
-                
-                <ul>
-                    { displayErrors() }
-                </ul>
-            </div>
+                    <div className="error-message">
+                        <ul>
+                            { displayErrors() }
+                        </ul>
+                    </div>
             }
-
-<div className="form-group">
-            <div className="left">
-                <label htmlFor="email"> Email</label>
+            <div className="form-group">
+                <div className="left">
+                    <label htmlFor="email"> Email</label>
+                </div>
+                <div className="right">
+                    <input 
+                        className={ emailIsValid ? 'valid':'invalid' }
+                        ref={ emailRef }
+                        name="email" 
+                        id="email" 
+                        placeholder="email@somedomain.com" 
+                        onChange={ validateEmail }
+                    />
+                </div>
             </div>
-            <div className="right">
-                <input 
-                    className={ emailIsValid ? 'valid':'invalid' }
-                    ref={ emailRef }
-                    name="email" 
-                    id="email" 
-                    placeholder="email@somedomain.com" 
-                    onChange={ validateEmail }
-                />
+            <div className="form-group">
+                <div className="left">
+                    <label htmlFor="message">Message</label> 
+                </div>
+                <div className="right">
+                    <textarea 
+                    ref={ messageRef } 
+                    name="message" 
+                    id="message" 
+                    placeholder="your mesage goes here..." />
+                </div>
             </div>
-        </div>
-        <div className="form-group">
-            <div className="left">
-                <label htmlFor="message">Message</label> 
-            </div>
-            <div className="right">
-                <textarea ref={ messageRef } name="message" id="message" placeholder="your mesage goes here..." />
-            </div>
-        </div>
-        <div className="form-group">
-            <div className="left" />
-            <div className="right">
-                <button
-                tab-index={0}
-                    onClick={ handleFormSubmit }
-                    onKeyDown={ handleKeyDown }
-                >Send Email</button>
+            <div className="form-group">
+                <div className="left" />
+                <div className="right">
+                    <button
+                        tab-index={0}
+                        onClick={ handleFormSubmit }
+                        onKeyDown={ handleKeyDown }
+                    >Send Email</button>
                 </div>
             </div>     
         </div>
